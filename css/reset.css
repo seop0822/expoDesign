@@ -1,0 +1,240 @@
+@charset "utf-8";
+/* ========================================================
+	제목 : reset.css
+	작성자 : 윅슨
+	업데이트 : 2018-05-29
+ ======================================================== */
+
+/* NotoSansKR */
+@font-face {
+    font-family: "NotoSansKR";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/NotoSansKR-Regular.eot');src: local(※);
+    src: url('../font/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/NotoSansKR-Regular.woff') format('woff'),
+    url("../font/NotoSansKR-Regular.ttf") format("truetype");
+}
+/* NotoSansKR Bold */
+@font-face {
+    font-family: "NotoSansKR";
+    font-style: normal;
+    font-weight: bold;
+    src: url('../font/NotoSansKR-Bold.eot');src: local(※);
+    src: url('../font/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/NotoSansKR-Bold.woff') format('woff'),
+    url("../font/NotoSansKR-Bold.ttf") format("truetype");
+}
+
+/* NanumGothic */
+@font-face {
+    font-family: "NanumGothic";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/NanumGothic.eot');src: local(※);
+    src: url('../font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+    url('../font/NanumGothic.woff') format('woff'),
+    url("../font/NanumGothic.ttf") format("truetype");
+}
+/* NanumGothic Bold */
+@font-face {
+    font-family: "NanumGothic";
+    font-style: normal;
+    font-weight: bold;
+    src: url('../font/NanumGothicBold.eot');src: local(※);
+    src: url('../font/NanumGothicBold.eot?#iefix') format('embedded-opentype'),
+    url('../font/NanumGothicBold.woff') format('woff'),
+    url("../font/NanumGothicBold.ttf") format("truetype");
+}
+html{
+    -webkit-text-size-adjust:none;
+}
+html,body, div,p,h1,h2,h3,h4,h5,h6,input,button,textarea,select,table,ul,ol,li,dl,dt,dd,label,a,strong{margin:0;padding:0;}
+body, a, input, button, select, p{font-size:14px;font-family:'NotoSansKR','Malgun Gothic','돋움','sans-serif';line-height:1.7em;color:#333333}
+.ie8 body, .ie8 a, .ie8 input, .ie8 button, .ie8 select,.ie8 p{font-family:'NanumGothic','Malgun Gothic','돋움','sans-serif';}
+table {width:100%;table-layout:fixed;border-collapse: collapse;border-spacing: 0;}
+legend {width:0;height:0;font-size:0;line-height:0;overflow:hidden}
+address,em{font-style:normal}
+img,fieldset,iframe{border:0;padding:0;margin:0}
+img,input,select,button,textarea{vertical-align:middle;}
+label,button,input[type="button"],input[type="submit"]{cursor:pointer;border:0;outline:0;}
+input{display:inline-block;*display:inline;border:0;}
+button{display:inline-block;*display:inline;padding:0;margin:0;border:0;cursor:pointer;line-height:0;vertical-align:middle;overflow:visible;background:transparent;outline: none;}
+button::-moz-focus-inner,input::-moz-focus-inner, button:active{}
+button:focus {outline: -webkit-focus-ring-color auto 5px;}
+select, button{box-sizing: content-box;}
+hr{display:none;}
+
+a{text-decoration:none;color:#7e7e7e;font-size:14px}
+a:hover{text-decoration:none;color:#7e7e7e}
+a:selected, a:visited {outline: none}
+a:active, a:focus {outline:none;}
+
+/* hidden contents */
+.skip, .hidden, .commonH{position:absolute; width:0; height:0; font-size:0; line-height:0; overflow:hidden; visibility:hidden; z-index:-1;}
+.no_hidden{text-align:left;width:auto;height:auto;font-size:1em;line-height:inherit;overflow:hidden}
+
+/*clear*/
+.clearfix:after{content:'';display:block;clear:both;}
+.clearfix{*zoom:1}
+.clear{margin:0;padding:0;list-style:none;}
+
+/* float */
+.clearfix .float_l{float:left;}
+.clearfix .float_r{float:right;}
+.clearfix .float_n{clear:both;}
+
+/*ellipsis*/
+.ellipsis{display:block;width:100%;white-space: nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+/* skipToContent */
+#skipToContent {position:absolute;top:0;height:0px;width:100%;z-index:30;}
+#skipToContent a {display:block; height:1px; width:1px; margin-bottom:-1px; overflow:hidden; text-align:center;color:#fff;white-space:nowrap;;}
+#skipToContent a:focus, #skipToContent a:active {display:block;top:0;width:100%;height:30px;line-height:30px;background:#555;color:#eee;}
+
+/*form&input base style*/
+
+input{height:1.8em;line-height:1em;font-size:1em;padding:0.4em;border:1px solid #e5e5e5;background:#fff;}
+.ie8 input{height:1em;padding:.75em .5em}
+input[size="100"]{width:98%}
+input[size="80"]{width:80%}
+input[size="30"]{width:30em}
+input[size="20"]{width:20em}
+input[size="15"]{width:15em}
+input[size="10"]{width:10em}
+input[size="5"]{width:3.5em}
+input[size="6"]{width:4.5em}
+input[type="file"]{padding:0}
+input::-webkit-input-placeholder { color: #666666;}
+input::-moz-placeholder { color: #666666;}
+input:-ms-input-placeholder { color: #666666;}
+input:-moz-placeholder { color: #666666;}
+input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"]{
+    -webkit-appearance: none;-moz-appearance: none;appearance: none;border-radius: 0px;} /* 모바일 라운드 제거 */
+.ie8 input[type="checkbox"], .ie8 input[type="radio"]{background:transparent;outline:0;border:0}
+
+textarea{display:block;border:1px solid #e5e5e5;padding:5px 3px}
+textarea[size="100"]{width:99%}
+select{height:1.8em;line-height:1em;font-size:1em;padding:0.4em;margin:0;border:1px solid #e5e5e5;color:#666666;background:transparent;}
+select[width="5"]{width:50px}
+select[width="10"]{width:100px}
+select[width="20"]{width:200px}
+select[width="30"]{width:300px}
+label > * { pointer-events:none; }
+@media (max-width:768px){
+    /* 사파리에서 스크롤 */
+    html{
+        overflow:scroll;
+        -webkit-overflow-scrolling:touch;
+    }
+    /* 사파리에서 고정 */
+    table{
+        table-layout: fixed;
+        min-width: 100%;
+        max-width: none;
+        width: auto;
+    }
+    input[type="radio"] , input[type="checkbox"] {
+        display:none;
+    }
+    input[type="radio"] + label span, input[type="checkbox"] + label span {
+        display:inline-block;
+        width:19px;
+        height:19px;
+        margin:-2px 5px 0 0;
+        vertical-align:middle;
+        background:url(../images/common/bg_radio.png) center no-repeat;
+        background-size:16px auto;
+        cursor:pointer;
+    }
+    input[type="radio"]:checked + label span , input[type="checkbox"]:checked + label span {
+        background:url(../images/common/bg_radio_on.png) center no-repeat;
+        background-size:16px auto;
+    }
+
+}
+
+/* padding & margin */
+.pt5{padding-top:.5em}
+.pt10{padding-top:1em}
+.pt20{padding-top:2em}
+.pt30{padding-top:3em}
+.pt40{padding-top:4em}
+.pt50{padding-top:5em}
+.mt10{margin-top:1em}
+.mt20{margin-top:2em}
+.mt30{margin-top:3em}
+.mt40{margin-top:4em}
+.mt50{margin-top:5em}
+
+/* ui-datepicker */
+.ui-datepicker {position:absolute;z-index:100 !important;width:20em;padding: .5em;display: none;background:#fff;border:1px solid #ccc;box-shadow:1px 1px 15px #aaa}
+.ui-datepicker .ui-datepicker-title{margin:0 20px}
+.ui-datepicker-trigger{border:1px solid #eee;border-radius:5px;background:#efefef;height:3em;padding:0 .5em}
+
+.ui-datepicker .ui-datepicker-header {position: relative;padding: .2em 0;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {position:absolute;top:5px;width:1.7em;height: 1.7em;text-indent:-99999px;border:1px solid #ccc;border-radius:3px}
+.ui-datepicker .ui-datepicker-prev {left:2px;background:url(images/datepicker_prev.png) 50% 50% no-repeat;}
+.ui-datepicker .ui-datepicker-next {right:2px;background:url(images/datepicker_next.png) 50% 50% no-repeat;}
+.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span {overflow:hidden;display: block;position: absolute;left: 50%;margin-left: -8px;top: 50%;margin-top: -8px;}
+.ui-datepicker .ui-datepicker-title {margin: 0 2.3em;line-height: 1.8em;text-align: center;}
+
+.ui-datepicker select{vertical-align:middle;height:2em;padding:.3em;margin:0 1px;border-radius:5px;width: 40%;}
+.ui-datepicker table {width: 100%;font-size: .9em;border-collapse: collapse;margin: 0 0 .4em;}
+.ui-datepicker th {padding: .7em .3em;text-align: center;font-weight: bold;border: 0;}
+.ui-datepicker td {border: 0;padding: 1px;}
+.ui-datepicker td span,.ui-datepicker td a {display: block;padding: .2em;font-size:1em;text-align: center;text-decoration: none;}
+.ui-datepicker .ui-datepicker-buttonpane {*zoom:1;padding-top:.3em;border-left: 0;border-right: 0;border-bottom: 0;}
+.ui-datepicker .ui-datepicker-buttonpane:after{display:block;clear:both;content:''}
+.ui-datepicker .ui-datepicker-buttonpane button {float: right;cursor: pointer;width: auto;overflow: visible;height:2em;padding:0 1em;vertical-align:middle;border:1px solid #ccc;border-radius:3px}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {float: left;}
+.ui-datepicker .ui-state-hover{background-color:#eee;border-radius:.5em}
+.ui-datepicker .ui-state-active{background-color:#ffbcbc;border-radius:.5em}
+.ui-datepicker .ui-state-highlight{background-color: #fffa90; color: #000;border-radius:.5em}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {width: auto;}
+.ui-datepicker-multi .ui-datepicker-group {float: left;}
+.ui-datepicker-multi .ui-datepicker-group table {width: 95%;margin: 0 auto .4em;}
+.ui-datepicker-multi-2 .ui-datepicker-group {width: 50%;}
+.ui-datepicker-multi-3 .ui-datepicker-group {width: 33.3%;}
+.ui-datepicker-multi-4 .ui-datepicker-group {width: 25%;}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {border-left-width: 0;}
+.ui-datepicker-multi .ui-datepicker-buttonpane {clear: left;}
+.ui-datepicker-row-break {clear: both;width: 100%;font-size: 0;}
+
+/* ui-tooltip */
+.ui-tooltip {padding: 8px;position: absolute;z-index: 9999;max-width: 300px;}
+.ui-widget-content {border: 1px solid #dddddd;background: #ffffff;color: #333333;}
+.ui-widget-content a {color: #333333;}
+
+/* Corner radius */
+.ui-corner-all{border-radius: 3px;}
+
+/* Layout helpers */
+.ui-helper-hidden {display: none;}
+.ui-helper-hidden-accessible {border: 0;clip: rect(0 0 0 0);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}
+.ui-helper-reset {margin: 0;padding: 0;border: 0;outline: 0;line-height: 1.3;text-decoration: none;font-size: 100%;list-style: none;}
+
+
+
+/*
+ *  scrollbar STYLE 1
+ */
+
+.custom_scroll::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    border-radius: 6px;
+}
+
+.custom_scroll::-webkit-scrollbar{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius:3px;
+}

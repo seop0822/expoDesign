@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .mouse {
+            position: absolute;
+            right: 50%;
+            top: 105px;
+            z-index: 997;
+            cursor: ns-resize;
+            transform: translateX(50%);
+            -webkit-transform: translateX(50%);
+            transition: all 0.5s ease-out;
+            -webkit-transition: all 0.5s ease-out
+        }
+        .mouse-shape {
+            display: block;
+            position: relative;
+            width: 25px;
+            height: 35px;
+            margin: 0 auto 5px;
+            border: 2px solid #53ACA2;
+            border-radius: 22px;
+            /* box-shadow: 2px 2px 2px rgb(0 0 0 / 50%); */
+        }
+        .mouse-shape .mouse-animation {
+            display: block;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #53ACA2;
+             /*box-shadow: 2px 2px 2px rgb(0 0 0 / 50%);*/
+            transform: translate(-50%, -25%);
+            animation: ball-scroll 2s linear infinite;
+            -webkit-transform: translate(-50%, -35%);
+            -webkit-animation: ball-scroll 2s linear infinite;
+        }
+
+        .mouse .mouse-msg {
+            font-size: 14px;
+            color: #53ACA2;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: center;
+            /* text-shadow: 2px 2px 2px rgb(0 0 0 / 50%); */
+        }
+
+        @-webkit-keyframes ball-scroll{
+            0%{top:25%;opacity:1;}
+            20%{top:50%;opacity:1;}
+            50%{top:75%;opacity:0;}
+            100%{top:25%;opacity:0;}
+        }
+        @keyframes ball-scroll{
+            0%{top:25%;opacity:1;}
+            20%{top:50%;opacity:1;}
+            50%{top:75%;opacity:0;}
+            100%{top:25%;opacity:0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="mouse">
+        <div class="mouse-shape">
+            <div class="mouse-animation">
+            </div>
+        </div>
+        <div class="mouse-msg">SCROLL</div>
+    </div>
+</body>
+</html>

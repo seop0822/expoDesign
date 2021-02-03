@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .navbar {
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            display: flex;
+            flex-wrap:wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navItem {
+            padding:10px;
+            text-align: center;
+            width:100%;
+        }
+
+        .navItem a {
+            display: block;
+            padding:10px 5px;
+        }
+
+        .navItem a:hover {
+            background-color:black;
+            color:white;
+        }
+
+        @media all and(max-width:960px) {
+            body {
+                background: red;
+            }
+            .navbar {
+                position:relative;
+                display:block;
+                width:auto;
+            }
+            .navbar {
+                align-items: flex-start;
+                flex-wrap: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul class="navbar">
+        <li class="navItem"><a href="#"></a>행사소개</li>
+        <li class="navItem"><a href="#"></a>사전등록</li>
+        <li class="navItem"><a href="#"></a>게시판</li>
+        <li class="navItem"><a href="#"></a>오시는길</li>
+    </ul>
+</nav>
+</body>
+</html>
